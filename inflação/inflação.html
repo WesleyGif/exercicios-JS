@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <title>Inflação</title>
+</head>
+<style>
+   body{
+      text-align: center  ;
+   }
+</style>
+<body>
+   <script>
+        function pulaLinha () {
+
+         document.write("<br><br>");
+         }
+
+         function mostra (frase) {
+
+         document.write(frase);
+         pulaLinha();
+         }
+      var tomatePrimeiro = 3.30;
+      var tomateFinal = 4.70;
+      var arrozPrimeiro = 2.99;
+      var arrozFinal = 3.25
+      var cenouraPrimeiro = 3.99;
+      var cenouraFinal = 4.14;
+
+      function inflacaoPeriodo(primeiro, final){
+         var total = 0;
+         return total = (final - primeiro) / primeiro * 100;
+      } 
+      function inflacaoMedia(tomate, arroz, cenoura){
+         var total =0;
+         return total = (tomate + arroz + cenoura) / 3;
+      }
+      function inflacaoDiaria(preco){
+         var total = 0;
+         return total = preco / 6;
+      }
+
+      var tomatePeriodo = inflacaoPeriodo(tomatePrimeiro,tomateFinal);
+      var arrozPeriodo = inflacaoPeriodo(arrozPrimeiro,arrozFinal);
+      var cenouraPeriodo = inflacaoPeriodo(cenouraPrimeiro,cenouraFinal);
+      var media = inflacaoMedia(tomatePeriodo,arrozPeriodo,cenouraPeriodo);
+                   
+      mostra("<h1>Inflação de cada produto</h1>A inflação do tomate no dia 24/04 ao dia 30/04 foi de " + tomatePeriodo .toFixed(2) + "%.");
+      mostra("A inflação do Arroz no dia 24/04 ao dia 30/04 foi de " + arrozPeriodo.toFixed(2)+ "%.");
+      mostra("A inflação da Cenoura no dia 24/04 ao dia 30/04 foi de " + cenouraPeriodo.toFixed(2) + "%. <hr>");
+                    
+      mostra("<h1>Inflação média</h1>A inflação média dos produtos foi de " + media.toFixed(2) + "%. <hr>");
+                   
+      mostra("<h1>Aumento Diário</h1>A inflação do Arroz no dia 24/04 ao dia 30/04 foi de " + inflacaoDiaria(arrozPeriodo).toFixed(3));
+      mostra("A inflação do Arroz no dia 24/04 ao dia 30/04 foi de " + inflacaoDiaria(tomatePeriodo).toFixed(2));
+      mostra("A inflação do Arroz no dia 24/04 ao dia 30/04 foi de " +inflacaoDiaria(cenouraPeriodo).toFixed(3));
+   </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <title>Lampada perguntas</title>
+</head>
+<body>
+   <script>
+      var plugada = prompt("A lampâda esta plugada? sim ou não?");
+      
+     
+      if(plugada == "não" || plugada == "nao"){
+         console.log("Plugar a lampâda");
+      }
+      else if(plugada == "sim" || plugada == "yes"){
+         var bulbo = prompt("O bulbo queimou?");
+      }
+      if(bulbo == "sim" || bulbo == "yes"){
+         console.log("Trocar o bulbo");
+      }
+      else if(bulbo == "nao" || bulbo=="não"){
+         console.log("Comprar uma nova lâmpada");
+      }
+   </script>
+</body>
+</html>

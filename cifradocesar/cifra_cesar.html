@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cifra do Cesar </title>
+</head>
+<body>
+    
+    <script>
+
+        function cifraDeCesar(deslocamento, mensagem) {
+            
+            var mensagemAlterada = "";
+            var juntaStr = [];
+            
+            for (var i = 0; i < mensagem.length; i++) {
+
+               juntaStr.push((mensagem.charCodeAt(i) + deslocamento)%126);
+               
+               mensagemAlterada += String.fromCharCode(juntaStr[i]);
+               
+               console.log(mensagemAlterada);
+            }
+            
+            return alert(mensagemAlterada);
+
+        }
+
+        var mensagemLida = prompt("Mensagem a ser incriptada: ");
+        var deslocamentoRequerido = parseInt(prompt("Digite um número: ")); 
+
+        cifraDeCesar(deslocamentoRequerido, mensagemLida);
+
+
+
+
+    </script>
+
+</body>
+</html>

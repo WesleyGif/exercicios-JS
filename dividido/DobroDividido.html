@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+   function pulaLinha () {
+
+      document.write("<br><br>");
+      }
+      
+      function mostra (frase) {
+      
+      document.write(frase);
+      pulaLinha();
+      }
+      function mostrarResultado(resultado){
+         document.write(resultado);
+      }
+      
+      function dobrado (numero) {
+      var total = 0;
+      return total = numero * numero;
+      
+      }
+
+      function dividido (number) {
+      var total = 0;
+      return total = number / 2;
+
+      }
+
+      var nome = prompt ("Informe o seu nome:")
+      var numeroDobrado = prompt("Insira um número a ser dobrado: ");
+      var numeroDividido = prompt("Insira um número a ser dividido: ");
+      
+      var resultadoDrobrado = dobrado(numeroDobrado);
+      var resultadoDividido = dividido(numeroDividido);
+
+      mostra("Olá " + nome + "Tudo bem ?");
+      mostra("Seu número dobrado é igual a: " + resultadoDrobrado);
+      mostra("Seu número dividido é igual a: " + resultadoDividido);
+
+   </script>
+</body>
+</html>
